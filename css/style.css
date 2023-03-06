@@ -59,6 +59,9 @@ a:visited {
   background-color: #f4eefc;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px;
 }
+.btn--grey:hover i {
+  color: #9356DC;
+}
 .btn--mini {
   position: absolute;
   left: -9px;
