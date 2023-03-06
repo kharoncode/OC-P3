@@ -31,16 +31,17 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .btn--purple {
-  width: 216px;
+  min-width: 216px;
   height: 48px;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: #FFFFFF;
   font-weight: 600;
 }
 .btn--grey {
-  width: 328px;
+  max-width: 328px;
   height: 71px;
   background-color: #f7f7f7;
   font-size: 0.8125em;
@@ -84,6 +85,10 @@ h2 {
   }
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -115,15 +120,45 @@ ul {
 .header-nav__location {
   padding: 16px 0;
   width: 100%;
+  height: 50px;
   background-color: #e9e9e9;
+  color: #363636;
+  font-weight: 500;
   display: flex;
   justify-content: center;
+}
+.header-nav__location input {
+  background-color: inherit;
+  border: none;
+  max-width: 150px;
+  text-align: center;
+}
+.header-nav__location input:focus {
+  outline: none;
 }
 .header-nav h2 {
   padding: 43px 62px 20px 62px;
 }
-.header-nav p {
+.header-nav__text {
   padding: 0 38px 35px 38px;
+}
+
+.header-information {
+  width: 100%;
+  padding: 50px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-information h2 {
+  padding: 0 0 32px 22px;
+  align-self: start;
+}
+.header-information div {
+  margin-bottom: 25px;
+}
+.header-information i {
+  color: #7d7d7d;
 }
 
 /* MAIN */
