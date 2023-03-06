@@ -9,6 +9,7 @@
   padding: 0;
   margin: 0;
   font-size: 16px;
+  line-height: 1.4em;
   font-family: "Roboto", sans-serif;
 }
 
@@ -70,11 +71,10 @@ a:visited {
 
 h2 {
   font-size: 2em;
-  line-height: 1.875em;
 }
 @media screen and (max-width: 500px) {
   h2 {
-    font-size: 1.0625em;
+    font-size: 1.4em;
   }
 }
 
@@ -110,6 +110,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .header-nav__location {
   padding: 16px 0;
@@ -119,7 +120,10 @@ ul {
   justify-content: center;
 }
 .header-nav h2 {
-  padding-top: 43px;
+  padding: 43px 62px 20px 62px;
+}
+.header-nav p {
+  padding: 0 38px 35px 38px;
 }
 
 /* MAIN */
