@@ -43,8 +43,6 @@
     }
 
     .btn{
-        border-radius: 50px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,25 +51,42 @@
         &--purple{
             min-width: 216px;
             height: 48px;
+            border-radius: 50px;
             background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
             color: #FFFFFF;
             font-weight: 600;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px;
         }
 
         &--grey{
+            position: relative;
+            justify-content: initial;
+            padding-left: 75px;
+            margin-left: 20px;
+            width: 100%;
             max-width: 328px;
-            height: 71px;
+            height: 70px;
+            border-radius: 15px;
             background-color: darken($bg-color, 3);
-            font-size: 0.8125em;
+            font-size: 0.9em;
+            font-weight: 500;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px -3px;
             transition-duration: 0.3s;
             &:hover{
                 background-color: lighten($color-primary, 36);
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px;
             }
         }
 
         &--mini{
+            position: absolute;
+            left: -9px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
             width: 22px;
             height: 22px;
+            border-radius: 50px;
             background-color: $color-primary;
             color: $bg-color;
             font-weight: 600;
@@ -169,21 +184,23 @@
 
     .header-information{
         width: 100%;
-        padding: 50px 0 40px 0;
+        padding: 55px 35px 70px 22px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         & h2{
-            padding: 0 0 32px 22px;
+            padding-bottom: 32px;
             align-self: start;
         }
 
-        & div{
+        & div:not(:last-child){
             margin-bottom: 25px;
         }
 
         & i{
+            position: absolute;
+            left: 38px;
             color: darken($bg-color, 51);
         }
     }
