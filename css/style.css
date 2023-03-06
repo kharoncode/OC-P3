@@ -45,7 +45,6 @@ a:visited {
   justify-content: initial;
   padding-left: 75px;
   margin-left: 20px;
-  width: 100%;
   max-width: 328px;
   height: 70px;
   border-radius: 15px;
@@ -76,6 +75,18 @@ a:visited {
   font-weight: 600;
   color: #FFFFFF;
 }
+.btn--green {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 80px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #99e2d0;
+  color: #278870;
+  font-weight: 500;
+  font-size: 0.9em;
+}
 
 .body {
   margin: 0 auto;
@@ -99,7 +110,7 @@ h2 {
 
 @media screen and (max-width: 500px) {
   h4 {
-    font-size: 0.8125em;
+    font-size: 1em;
   }
 }
 
@@ -184,15 +195,21 @@ ul {
 /* MAIN */
 .main {
   width: 100%;
+  padding: 60px 22px 65px 22px;
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.main h2 {
+  padding-bottom: 30px;
+  align-self: start;
+}
 
 .restaurant-card {
+  position: relative;
   width: 100%;
-  max-width: 334px;
+  min-width: 334px;
   height: 251px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -203,6 +220,33 @@ ul {
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+}
+.restaurant-card .restaurant-card__info {
+  position: relative;
+  padding-left: 15px;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.restaurant-card .restaurant-card__info i {
+  position: absolute;
+  right: 25px;
+  margin: auto 0;
+  font-size: 1.5em;
+}
+.restaurant-card .restaurant-card__info i.checked {
+  color: transparent;
+}
+.restaurant-card .restaurant-card__info i.checked:hover {
+  transform: scale(1.1);
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant-card .restaurant-card__info i.no-checked:hover {
+  color: transparent;
 }
 
 /* FOOTER */
