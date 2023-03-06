@@ -5,16 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ohmyfood</title>
     <!-- Font Google -->
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap" rel="stylesheet"> 
     <!-- CSS -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/16f0d96f1d.js" crossorigin="anonymous"></script>  
 </head>
-<body>
 
-    <p>Hello Word</p>
+<body class="body">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="#"><img src="images/logo/ohmyfood@2x.svg" alt="ohmyfood" class="logo-img"></a>
+        </div>
+        
+        <nav class="header-nav">
+            <div class="header-nav__location"><i class="fa-solid fa-location-dot"></i> Paris, Belleville</div>
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <a href="#"><div class="btn btn--purple">Explorer nos restaurants</div></a>
+        </nav>
+
+
+        <section class="header-information">
+            <h2>Fonctionnement</h2>
+            <div class="btn btn--grey"><div class="btn btn--mini">1</div><i class="fa-solid fa-mobile-screen-button"></i> Choissiez un restaurant</div>
+            <div class="btn btn--grey"><div class="btn btn--mini">2</div><i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-bars"></i> Composez votre menu</div>
+            <div class="btn btn--grey"><div class="btn btn--mini">3</div><i class="fa-solid fa-store"></i> Dégustez au restaurant</div>
+        </section>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <h2>Restaurants</h2>
+        <a href="#" class="restaurant-card">
+            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût" class="restaurant img">
+            <div class="btn--green">Nouveau</div>
+            <h4>La palette du goût</h4>
+            <p>Ménilmontant</p>
+            <i class="fa-regular fa-heart"></i>
+         </a>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <ul>
+            <li class="footer__logo">ohmyfood</li>
+            <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
+            <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
+    </footer>
     
 </body>
 </html> 

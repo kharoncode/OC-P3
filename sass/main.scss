@@ -1,0 +1,172 @@
+/* VARIABLES */
+    /* Font */
+        $logo-font: "Shrikhand";
+        $text-font: "Roboto";
+
+    /* Color */
+        $color-primary: #9356DC;
+        $color-secondary: #FF79DA;
+        $color-tertiary: #99E2D0;
+        $bg-color: #FFFFFF;
+
+    /* Size */
+        $mq-tablette: 992px;
+        $mq-phone: 500px;
+
+/* MIXINS */
+    @mixin media-queries ($size) {
+        @media screen and (max-width: $size) {
+            @content;
+        }
+    } 
+
+/* BODY */
+    * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: $text-font, sans-serif;
+    }
+
+    a {
+    text-decoration: none;
+    }
+
+    a:link{
+        color: black;
+    }
+
+    a:visited{
+        color: initial;
+    }
+
+    .btn{
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--purple{
+            width: 216px;
+            height: 48px;
+            background-color: #FF79DA;
+            color: #FFFFFF;
+        }
+
+        &--grey{
+            width: 328px;
+            height: 71px;
+            background-color: darken($bg-color, 3);
+            font-size: 0.8125em;
+        }
+
+        &--mini{
+            width: 22px;
+            height: 22px;
+            background-color: $color-primary;
+            color: $bg-color;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+    }
+
+    .body {
+    margin: 0 auto;
+    max-width: 1400px;
+    }
+
+    .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    h2{
+        font-size: 2em;
+
+        @include media-queries($mq-phone) {
+            font-size: 1.0625em;
+        }
+    }
+
+    h4{
+        @include media-queries($mq-phone) {
+            font-size: 0.8125em;
+        }
+    }
+
+    html { 
+    scroll-behavior: smooth;
+    }
+
+    ul {
+    list-style-type: none;
+    } 
+
+
+/* HEADER */
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-logo{
+            padding: 23px 0 22px 0;
+        }
+    }
+
+    .header-nav{
+        width: 100%;
+        background-color: darken($bg-color, 3);
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__location{
+            padding: 16px 0;
+            width: 100%;
+            background-color: darken($bg-color, 8.5);
+            display: flex;
+            justify-content: center;
+        }
+
+        & h2{
+            padding-top: 43px;
+        }
+    }
+
+/* MAIN */
+    .main{
+        width: 100%;
+        background-color: darken($bg-color, 3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurant-card{
+        width: 100%;
+        max-width: 334px;
+        height: 251px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        background-color: $bg-color;
+       
+        & img{
+            height: 68%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+
+/* FOOTER */
+    .footer{
+        width: 100%;
+        background-color: darken($bg-color, 79);
+        color: #FFFFFF;
+    }
