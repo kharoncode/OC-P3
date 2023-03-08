@@ -25,16 +25,16 @@
     
 /* BODY */
     * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.4em;
-    font-family: $text-font, sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.4em;
+        font-family: $text-font, sans-serif;
     }
 
     a {
-    text-decoration: none;
+        text-decoration: none;
     }
 
     a:link{
@@ -241,7 +241,7 @@
     .restaurant-card{
         position: relative;
         width: 100%;
-        min-width: 334px;
+        max-width: 430px;
         height: 251px;
         border-radius: 20px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -252,31 +252,26 @@
             right: 25px;
             bottom: 28px;
             font-size: 1.5em;
-            &.checked{
-                color: transparent;
-                &:hover{
-                transform: scale(1.1);
+            &:hover{
+                font-weight: 1000;
                 background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                }
-            }
-            &.no-checked:hover{
-                color: transparent;
             }
         }
        
         & img{
+            display: block;
             height: 68%;
             width: 100%;
             object-fit: cover;
             border-radius: 20px 20px 0 0;
         }
 
-        & .restaurant-card__info {
+        &__info {
             position: relative;
             padding-left: 15px;
-            height: 26%;
+            height: 32%;
             display: flex;
             flex-direction: column;
             justify-content: center;
