@@ -246,22 +246,8 @@
         border-radius: 20px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
         background-color: $bg-color;
-
-        & i{
-            position: absolute;
-            right: 25px;
-            bottom: 28px;
-            font-size: 1.5em;
-            &:hover{
-                font-weight: 1000;
-                background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-        }
        
         & img{
-            display: block;
             height: 68%;
             width: 100%;
             object-fit: cover;
@@ -277,7 +263,33 @@
             justify-content: center;
             gap: 5px;
         }
+
+        & label{
+            display: inline-block;
+            position: absolute;
+            right: 25px;
+            bottom: 28px;
+            &>i{
+                font-size: 1.5em;
+            }
+        }
+
+        &__heart{
+            display: none;
+            &:checked+label>i{
+                font-weight: 1000;
+                background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition-duration: 0.3s;
+            }
+        }
     }
+
+    
+        
+    
+    
 
 
 /* FOOTER */
