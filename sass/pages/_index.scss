@@ -96,6 +96,7 @@
     background-color: $bg-color;
    
     & img{
+        display: block;
         height: 68%;
         width: 100%;
         object-fit: cover;
@@ -122,14 +123,4 @@
         }
     }
 
-    &__heart{
-        display: none;
-        &:checked+label>i{
-            font-weight: 1000;
-            background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition-duration: 0.3s;
-        }
-    }
 }

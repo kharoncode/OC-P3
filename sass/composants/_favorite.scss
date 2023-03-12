@@ -1,0 +1,36 @@
+@keyframes heart-pulse {
+    0%{
+        transform: scale(0);
+    }
+
+    40%{
+        transform: scale(1.4);
+    }
+
+    80%{
+        transform: scale(0.7);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.favorite{
+    
+    &--heart{
+        display: none;
+        
+        &+label>i:hover{
+            color: $color-primary;
+        }
+
+        &:checked+label>i{
+            font-weight: 1000;
+            background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: heart-pulse 600ms 100ms ease-in both;
+        }
+    }
+}

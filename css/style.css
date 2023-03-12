@@ -142,6 +142,34 @@ ul {
   font-size: 0.9em;
 }
 
+@keyframes heart-pulse {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.4);
+  }
+  80% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.favorite--heart {
+  display: none;
+}
+.favorite--heart + label > i:hover {
+  color: #9356DC;
+}
+.favorite--heart:checked + label > i {
+  font-weight: 1000;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart-pulse 600ms 100ms ease-in both;
+}
+
 /* PAGES */
 /* HEADER */
 .header {
@@ -233,6 +261,7 @@ ul {
   background-color: #FFFFFF;
 }
 .restaurant-card img {
+  display: block;
   height: 68%;
   width: 100%;
   object-fit: cover;
@@ -255,16 +284,6 @@ ul {
 }
 .restaurant-card label > i {
   font-size: 1.5em;
-}
-.restaurant-card__heart {
-  display: none;
-}
-.restaurant-card__heart:checked + label > i {
-  font-weight: 1000;
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition-duration: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */
