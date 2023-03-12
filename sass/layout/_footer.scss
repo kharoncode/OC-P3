@@ -1,0 +1,16 @@
+.footer{
+    padding: 26px 0 40px 25px;
+    width: 100%;
+    background-color: darken($bg-color, 79);
+    color: #FFFFFF;
+
+    &__logo{
+        font-family: $logo-font;
+        font-size: 1.1em;
+        padding-bottom: 30px;
+    }
+
+    & li:not(:first-child, :last-child){
+        padding-bottom: 10px;
+    }
+}
