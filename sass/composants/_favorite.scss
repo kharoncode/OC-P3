@@ -3,7 +3,7 @@
         transform: scale(0);
     }
 
-    40%{
+    50%{
         transform: scale(1.4);
     }
 
@@ -30,7 +30,7 @@
             background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: heart-pulse 600ms 100ms ease-in both;
+            animation: heart-pulse 380ms 100ms cubic-bezier(.16,.93,.72,.85) both;
         }
     }
 }
