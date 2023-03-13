@@ -19,39 +19,34 @@ a:visited{
     color: initial;
 }
 
-.body {
-    margin: 0 auto;
-    max-width: 1400px;
-    }
-
-    .center{
+.center{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h2{
+    font-size: 2em;
+
+    @include media-queries($mq-phone) {
+        font-size: 1.4em;
     }
+}
 
-    h2{
-        font-size: 2em;
-
-        @include media-queries($mq-phone) {
-            font-size: 1.4em;
-        }
+h4{
+    @include media-queries($mq-phone) {
+        font-size: 1em;
     }
+}
 
-    h4{
-        @include media-queries($mq-phone) {
-            font-size: 1em;
-        }
-    }
+.hidden{
+    visibility: hidden;
+}
 
-    .hidden{
-        visibility: hidden;
-    }
-
-    html { 
+html { 
     scroll-behavior: smooth;
-    }
+}
 
-    ul {
+ul {
     list-style-type: none;
-    } 
+} 

@@ -1,13 +1,29 @@
 .footer{
-    padding: 26px 0 40px 25px;
+    padding: 26px 40px 40px 40px;
     width: 100%;
     background-color: darken($bg-color, 79);
     color: #FFFFFF;
 
+    @include media-queries($mq-phone){
+        padding: 26px 25px 40px 25px;
+    }
+
     &__logo{
+        width: 100%;
         font-family: $logo-font;
         font-size: 1.1em;
         padding-bottom: 30px;
+    }
+
+    & ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        @include media-queries($mq-tablette){
+            display: initial;
+            flex-wrap: nowrap;
+        }
     }
 
     & li:not(:first-child, :last-child){
