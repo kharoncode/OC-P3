@@ -63,4 +63,19 @@
         font-weight: 500;
         font-size: 0.9em;
     }
+
+    &--white{
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: initial;
+        padding: 16px 10px;
+        max-width: 350px;
+        height: 70px;
+        border-radius: 15px;
+        background-color: $bg-color;
+        font-size: 0.9em;
+        font-weight: 500;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px -3px;
+    }
 }

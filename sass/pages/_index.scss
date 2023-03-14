@@ -54,15 +54,21 @@
     }
 
     &-logo{
-        padding: 23px 0 22px 41px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 23px 41px;
         width: 100%;
-
-        @include media-queries($mq-phone) {
-            width: initial;
-            padding: 23px 0 22px 0;
+        &--index{
+            @include media-queries($mq-phone) {
+                justify-content: center;
+                padding: 23px 0 22px 0;
+        }
         }
 
         & img{
+            display: block;
+            margin:  auto;
             width: 14em;
 
             @include media-queries($mq-phone){
@@ -207,6 +213,7 @@
     @include media-queries($mq-phone){
         border-radius: initial;
         flex-direction: column;
+        justify-content: initial;
         align-items: center;
         flex-wrap: initial;
     }
