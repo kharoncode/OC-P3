@@ -180,43 +180,48 @@
 /* MAIN */
 .main{
     width: 100%;
-    padding: 60px 40px 65px 40px;
     background-color: darken($bg-color, 3);
     border-radius: 20px 20px 0 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px 20px;
-    
-    &>div:nth-child(4n-1){
-        flex-grow: 1;
-    }
-    
-    &>div:nth-child(4n){
-        flex-grow: 1;
-    }
     
     
-    & h2{
-        width: 100%;
-        padding-bottom: 30px;
-        align-self: start;
-    }
-    
-    @include media-queries($mq-tablette){
-        padding: 60px 20px 65px 20px;
-        &>div{
+    &--index{
+        padding: 60px 40px 65px 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+
+        &>div:nth-child(4n-1){
             flex-grow: 1;
         }
-    }
+        
+        &>div:nth-child(4n){
+            flex-grow: 1;
+        }
+        
+        
+        & h2{
+            width: 100%;
+            padding-bottom: 30px;
+            align-self: start;
+        }
+        
+        @include media-queries($mq-tablette){
+            padding: 60px 20px 65px 20px;
+            &>div{
+                flex-grow: 1;
+            }
+        }
 
-    @include media-queries($mq-phone){
-        border-radius: initial;
-        flex-direction: column;
-        justify-content: initial;
-        align-items: center;
-        flex-wrap: initial;
+        @include media-queries($mq-phone){
+            border-radius: initial;
+            flex-direction: column;
+            justify-content: initial;
+            align-items: center;
+            flex-wrap: initial;
+        }
     }
+    
 }
 
 .restaurant-card{

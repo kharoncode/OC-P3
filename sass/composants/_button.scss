@@ -1,10 +1,32 @@
+@keyframes menu-checked {
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 60px;
+    }
+    
+}
+
+@keyframes menu-unchecked {
+    0%{
+        width: 60px;
+    }
+
+    100%{
+        width: 0px;
+    }
+    
+}
+
 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 
-    &--purple{
+    &--big{
         min-width: 216px;
         height: 48px;
         border-radius: 50px;
@@ -14,7 +36,7 @@
         box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px;
     }
 
-    &--grey{
+    &--help{
         position: relative;
         justify-content: initial;
         padding-left: 75px;
@@ -51,7 +73,7 @@
         color: #FFFFFF;
     }
 
-    &--green{
+    &--new{
         position: absolute;
         top: 13px;
         right: 13px;
@@ -64,18 +86,81 @@
         font-size: 0.9em;
     }
 
-    &--white{
+    &--menu{
         position: relative;
-        flex-direction: column;
-        justify-content: center;
-        align-items: initial;
-        padding: 16px 10px;
-        max-width: 350px;
+        cursor: pointer;
+        padding: 16px 24px 16px 10px;
+        min-width: 350px;
+        max-width: 500px;
         height: 70px;
         border-radius: 15px;
         background-color: $bg-color;
-        font-size: 0.9em;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px;
+
         font-weight: 500;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px -3px;
+        gap: 3px;
+        justify-content: space-between;
+
+        &:hover{
+            .btn--menu-checked{
+                width: 60px;
+                transition: all 400ms ease;
+
+                & i{
+                    transform: rotate(360deg);
+                    transition: all 400ms ease;
+                }
+            }
+
+            &.btn--menu span{
+                margin-right: 58px;
+                transition: all 320ms 80ms ease;
+            }
+        }
+
+        &-checked{
+            position: absolute;
+            right: 0;
+            height: 70px;
+            width: 0px;
+            background-color: $color-tertiary;
+            border-radius: 0 15px 15px 0;
+            transition: all 400ms ease;
+            overflow: hidden;
+
+            & i{
+                font-size: 1.5em;
+                color: $bg-color;
+            }
+        }
+
+        & h4{
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & p{
+            font-size: 0.95em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & .menu{
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        & span{
+            padding-left: 10px;
+            font-weight: 500;
+            color: darken($bg-color, 79);
+            transition: all 400ms ease;
+            align-self: self-end;
+
+            
+        }
     }
 }

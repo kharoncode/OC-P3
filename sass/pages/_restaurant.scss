@@ -25,44 +25,59 @@
 /* MAIN */
     .main{
         &--restaurant{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: relative;
-            margin-top: -34px;
-            border-radius: 15% 15% 0 0;
+            margin-top: -50px;
+            border-radius: 42px 42px 0 0;
             padding: 36px 12px 40px 13px;
 
             & label{
                 display: inline-block;
                 position: absolute;
                 right: 40px;
-                top: 41px;
+                top: 42px;
                 &>i{
-                    font-size: 1.4em;
+                    font-size: 1.5em;
                 }
             }
 
             & h2{
-                padding: 0 3px;
+                padding: 0 3px 40px 3px;
                 font-family: $logo-font;
                 font-size: 1.8em;
                 font-weight: 500;
+                align-self: flex-start;
             }
 
-            & .btn--purple{
-                width: initial;
-                min-width: 186px;
+            &-menu{
+                padding-bottom: 20px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 11px;
+                width: 100%;
+                max-width: 500px;
+        
+                & h3{
+                    align-self: flex-start;
+                    padding-bottom: 5px;
+                    margin-bottom: 3px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.03em;
+                    font-weight: 400;
+                    border-bottom: solid 3px;
+                    border-image: linear-gradient(90deg, $color-tertiary 60%, transparent 40%)1;
+                }
+            }
+
+            & .btn--big{
+                width: 185px;
                 height: 50px;
             }
+
         }
     }
 
-    .restaurant-starter{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 11px;
-        width: 100%;
-
-        & h3{
-            align-self: flex-start;
-        }
-    }
+    
