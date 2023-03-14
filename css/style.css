@@ -347,7 +347,16 @@ ul {
   }
 }
 .vis {
-  animation: vis 1000ms 4050ms ease both;
+  animation: vis 1500ms 4050ms ease both;
+}
+.vis-1 {
+  animation-delay: 4300ms;
+}
+.vis-2 {
+  animation-delay: 4550ms;
+}
+.vis-3 {
+  animation-delay: 4800ms;
 }
 
 /* BODY */
@@ -389,7 +398,7 @@ ul {
   }
 }
 .header-logo {
-  padding: 23px 0 22px 50px;
+  padding: 23px 0 22px 41px;
   width: 100%;
 }
 @media screen and (max-width: 650px) {
@@ -550,6 +559,7 @@ ul {
   height: 300px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition-duration: 0.3s;
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 650px) {
@@ -558,6 +568,9 @@ ul {
     height: 251px;
     min-width: 210px;
   }
+}
+.restaurant-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 19px 15px -3px, rgba(0, 0, 0, 0.05) 0px 9px 10px -2px;
 }
 .restaurant-card img {
   display: block;
