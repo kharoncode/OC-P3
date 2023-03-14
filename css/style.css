@@ -99,20 +99,14 @@ ul {
 }
 
 /* COMPOSANTS */
-@keyframes menu-checked {
+@keyframes btn-loading {
   0% {
-    width: 0;
+    transform: translateY(20px);
+    opacity: 0;
   }
   100% {
-    width: 60px;
-  }
-}
-@keyframes menu-unchecked {
-  0% {
-    width: 60px;
-  }
-  100% {
-    width: 0px;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .btn {
@@ -190,6 +184,7 @@ ul {
   font-weight: 500;
   gap: 3px;
   justify-content: space-between;
+  animation: btn-loading 1000ms 300ms ease both;
 }
 .btn--menu:hover .btn--menu-checked {
   width: 60px;
@@ -239,6 +234,38 @@ ul {
   color: #363636;
   transition: all 400ms ease;
   align-self: self-end;
+}
+
+.menu-1 {
+  animation-delay: 300ms;
+}
+
+.menu-2 {
+  animation-delay: 600ms;
+}
+
+.menu-3 {
+  animation-delay: 900ms;
+}
+
+.menu-4 {
+  animation-delay: 1200ms;
+}
+
+.menu-5 {
+  animation-delay: 1500ms;
+}
+
+.menu-6 {
+  animation-delay: 1800ms;
+}
+
+.menu-7 {
+  animation-delay: 2100ms;
+}
+
+.menu-8 {
+  animation-delay: 2400ms;
 }
 
 @keyframes heart-pulse {
