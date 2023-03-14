@@ -208,12 +208,20 @@ ul {
     transform: rotate(10deg);
   }
 }
-@keyframes walk {
+@keyframes walk-desktop {
   0% {
     transform: translateX(0px);
   }
   100% {
     transform: translateX(270px);
+  }
+}
+@keyframes walk-phone {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(221px);
   }
 }
 @keyframes step {
@@ -258,10 +266,20 @@ ul {
   align-items: center;
   animation: opa 3800ms 250ms ease both, move 1000ms 4050ms linear both;
 }
+@media screen and (max-width: 650px) {
+  .spinner-omf {
+    top: 6%;
+  }
+}
 .spinner-omf__tilte {
   font-family: "Shrikhand";
   font-size: 3.5em;
   font-weight: 700;
+}
+@media screen and (max-width: 650px) {
+  .spinner-omf__tilte {
+    font-size: 3em;
+  }
 }
 .spinner-omf__load {
   position: relative;
@@ -270,24 +288,45 @@ ul {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 650px) {
+  .spinner-omf__load {
+    width: 269px;
+  }
+}
 .spinner-omf__load::after {
-  content: "- - - - - - - - - - - - - - - - - - - - - - - - -";
+  content: "- - - - - - - - - - - - -";
   position: absolute;
   left: 28px;
   top: 5px;
   color: #71d7be;
+  font-size: 2em;
   font-weight: 700;
   width: 100%;
   height: 100%;
   overflow: hidden;
   animation: step 3500ms 800ms linear both;
 }
+@media screen and (max-width: 650px) {
+  .spinner-omf__load::after {
+    content: "- - - - - - - - - - - - - -";
+    left: 25px;
+    font-size: 1.5em;
+  }
+}
 .spinner-omf__load--walk {
-  animation: walk 3000ms 600ms linear both;
+  animation: walk-desktop 3000ms 600ms linear both;
+}
+@media screen and (max-width: 650px) {
+  .spinner-omf__load--walk {
+    animation: walk-phone 3000ms 600ms linear both;
+  }
 }
 .spinner-omf__load--walk > i.fa-person-walking {
   color: #ff46cc;
-  animation: shake 500ms 250ms linear both alternate 6;
+  animation: shake 500ms 250ms linear both alternate 7;
+}
+.spinner-omf__load i {
+  font-size: 1em;
 }
 .spinner-omf__load > i.fa-house {
   color: #782cd3;

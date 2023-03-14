@@ -11,13 +11,24 @@
     
 }
 
-@keyframes walk {
+@keyframes walk-desktop {
     0%{
         transform: translateX(0px);
     }
 
     100%{
         transform: translateX(270px);
+    }
+    
+}
+
+@keyframes walk-phone {
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(221px);
     }
     
 }
@@ -71,12 +82,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include media-queries($mq-phone){
+        top: 6%;
+    }
+
     animation: opa 3800ms 250ms ease both, move 1000ms 4050ms linear both;
 
     &__tilte{
         font-family: $logo-font;
         font-size: 3.5em;
         font-weight: 700;
+        @include media-queries($mq-phone){
+            font-size: 3em;
+        }
     }
 
     &__load{
@@ -85,26 +104,44 @@
         width: 320px;
         display: flex;
         align-items: center;
+        @include media-queries($mq-phone){
+            width: 269px;
+        }
 
         &::after{
-            content:"- - - - - - - - - - - - - - - - - - - - - - - - -";
+            content:"- - - - - - - - - - - - -";
             position: absolute;
             left: 28px;
             top: 5px;
             color: darken($color-tertiary, 10);
+            font-size: 2em;
             font-weight: 700;
             width: 100%;
             height: 100%;
             overflow: hidden;
+
+            @include media-queries($mq-phone){
+                content:"- - - - - - - - - - - - - -";
+                left: 25px;
+                font-size: 1.5em;
+            }
+
             animation: step 3500ms 800ms linear both;
         }
 
         &--walk{
-            animation: walk 3000ms 600ms linear both;
+            animation: walk-desktop 3000ms 600ms linear both;
+            @include media-queries($mq-phone){
+                animation: walk-phone 3000ms 600ms linear both;;
+            }
             &>i.fa-person-walking{
                 color: darken($color-secondary, 10);
-                animation: shake 500ms 250ms linear both alternate 6;
+                animation: shake 500ms 250ms linear both alternate 7;
             }
+        }
+
+        & i{
+            font-size: 1em;
         }
 
         &>i.fa-house{
