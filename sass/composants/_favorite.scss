@@ -34,4 +34,20 @@
             color: $color-primary;
         }
     }
+
+    &--menu{
+        &>input{
+            display: none;
+            &:checked+.btn--menu>.btn--menu-checked{
+                 width: 60px;
+                 & i{
+                    transform: rotate(360deg);
+                 }
+            }
+
+            &:checked+.btn--menu>span{
+                margin-right: 58px;
+           }
+        }
+    }
 }

@@ -33,7 +33,7 @@
             border-radius: 42px 42px 0 0;
             padding: 36px 12px 40px 13px;
 
-            & label{
+            & .favorite--heart{
                 display: inline-block;
                 position: absolute;
                 right: 40px;
@@ -52,7 +52,7 @@
             }
 
             &-menu{
-                padding-bottom: 20px;
+                padding-bottom: 40px;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
@@ -69,6 +69,10 @@
                     font-weight: 400;
                     border-bottom: solid 3px;
                     border-image: linear-gradient(90deg, $color-tertiary 60%, transparent 40%)1;
+                }
+
+                & label{
+                    width: 100%;
                 }
             }
 
