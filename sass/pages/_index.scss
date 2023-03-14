@@ -1,3 +1,18 @@
+/* VISIBILITY */
+@keyframes vis {
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+
+.vis{
+    animation: vis 1000ms 4050ms ease both;
+}
+
 /* BODY */
 .body {
     position: relative;
