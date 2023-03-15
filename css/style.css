@@ -175,7 +175,7 @@ ul {
   position: relative;
   cursor: pointer;
   padding: 16px 24px 16px 10px;
-  min-width: 350px;
+  min-width: 330px;
   max-width: 500px;
   height: 70px;
   border-radius: 15px;
@@ -266,6 +266,10 @@ ul {
 
 .menu-8 {
   animation-delay: 2400ms;
+}
+
+.menu-9 {
+  animation-delay: 2700ms;
 }
 
 @keyframes heart-pulse {
@@ -733,13 +737,21 @@ ul {
 
 /* MAIN */
 .main--restaurant {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: -50px;
   border-radius: 42px 42px 0 0;
   padding: 36px 12px 40px 13px;
+}
+@media screen and (max-width: 650px) {
+  .main--restaurant {
+    justify-content: initial;
+    flex-direction: column;
+  }
 }
 .main--restaurant .favorite--heart {
   display: inline-block;
@@ -751,11 +763,17 @@ ul {
   font-size: 1.5em;
 }
 .main--restaurant h2 {
+  width: 100%;
   padding: 0 3px 40px 3px;
   font-family: "Shrikhand", cursive;
   font-size: 1.8em;
   font-weight: 500;
   align-self: flex-start;
+}
+@media screen and (max-width: 650px) {
+  .main--restaurant h2 {
+    width: initial;
+  }
 }
 .main--restaurant-menu {
   padding-bottom: 40px;
@@ -763,8 +781,15 @@ ul {
   align-items: center;
   flex-direction: column;
   gap: 11px;
-  width: 100%;
+  width: 30%;
+  flex-grow: 1;
+  min-width: 313px;
   max-width: 500px;
+}
+@media screen and (max-width: 650px) {
+  .main--restaurant-menu {
+    width: 100%;
+  }
 }
 .main--restaurant-menu h3 {
   align-self: flex-start;
@@ -782,6 +807,11 @@ ul {
 .main--restaurant .btn--big {
   width: 185px;
   height: 50px;
+}
+.main--restaurant a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
