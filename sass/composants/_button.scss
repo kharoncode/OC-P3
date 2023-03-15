@@ -71,8 +71,8 @@
         width: 80px;
         height: 30px;
         border-radius: 3px;
-        background-color: $btn-new__bg;
-        color: $btn-new__text;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 40);
         font-weight: 500;
         font-size: 0.9em;
     }
@@ -80,14 +80,14 @@
     &--menu{
         position: relative;
         cursor: pointer;
-        padding: 16px 24px 16px 10px;
+        padding: 16px 0 16px 10px;
         min-width: 330px;
         max-width: 500px;
         height: 70px;
         border-radius: 15px;
         background-color: $bg-color;
         box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px;
-
+        overflow: hidden;
         font-weight: 500;
         gap: 3px;
         justify-content: space-between;
@@ -106,13 +106,12 @@
             }
 
             &.btn--menu span{
-                margin-right: 58px;
+                margin-right: 5px;
                 transition: all 320ms 80ms ease;
             }
         }
 
         &-checked{
-            position: absolute;
             right: 0;
             height: 70px;
             width: 0px;
@@ -148,17 +147,18 @@
 
         & span{
             padding-left: 10px;
+            padding-right: 14px;
             font-weight: 500;
             color: darken($bg-color, 79);
+            flex-grow: 2;
+            text-align: end;
             transition: all 400ms ease;
             align-self: self-end;
-
-            
         }
     }
 }
 
-@for $i from 1 to 10{
+@for $i from 1 to 11 {
     .menu-#{$i}{
         animation-delay: 300ms*$i;
     }

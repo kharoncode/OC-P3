@@ -25,6 +25,7 @@
                 font-weight: 1000;
                 background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
                 background-clip: text;
+                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 animation: heart-pulse 380ms 100ms cubic-bezier(.16,.93,.72,.85) both;
             }
@@ -46,7 +47,7 @@
             }
 
             &:checked+.btn--menu>span{
-                margin-right: 58px;
+                margin-right: 5px;
            }
         }
     }
