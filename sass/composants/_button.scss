@@ -93,7 +93,15 @@
 
         animation: btn-loading 1000ms 300ms ease both;
 
-        
+
+        /*TEST*/
+        & span.titre, span.sous-titre{
+            display: inline-block;
+            font-size: 1.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
         &:hover{
             .btn--menu-checked{
@@ -106,7 +114,7 @@
                 }
             }
 
-            &.btn--menu span{
+            &.btn--menu .menu-price{
                 margin-right: 5px;
                 transition: all 320ms 80ms ease;
             }
@@ -144,17 +152,17 @@
         & .menu{
             margin-right: auto;
             overflow: hidden;
-        }
 
-        & span{
-            padding-left: 10px;
-            padding-right: 14px;
-            font-weight: 500;
-            color: darken($bg-color, 75);
-            flex-grow: 2;
-            text-align: end;
-            transition: all 400ms ease;
-            align-self: self-end;
+            &-price{
+                padding-left: 10px;
+                padding-right: 14px;
+                font-weight: 500;
+                color: darken($bg-color, 75);
+                flex-grow: 2;
+                text-align: end;
+                transition: all 400ms ease;
+                align-self: self-end;
+            }
         }
     }
 }

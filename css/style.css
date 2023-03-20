@@ -183,6 +183,14 @@ ul {
   gap: 3px;
   justify-content: space-between;
   animation: btn-loading 1000ms 300ms ease both;
+  /*TEST*/
+}
+.btn--menu span.titre, .btn--menu span.sous-titre {
+  display: inline-block;
+  font-size: 1.1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn--menu:hover .btn--menu-checked {
   width: 60px;
@@ -192,7 +200,7 @@ ul {
   transform: rotate(360deg);
   transition: all 400ms ease;
 }
-.btn--menu:hover.btn--menu span {
+.btn--menu:hover.btn--menu .menu-price {
   margin-right: 5px;
   transition: all 320ms 80ms ease;
 }
@@ -225,7 +233,7 @@ ul {
   margin-right: auto;
   overflow: hidden;
 }
-.btn--menu span {
+.btn--menu .menu-price {
   padding-left: 10px;
   padding-right: 14px;
   font-weight: 500;
@@ -299,6 +307,7 @@ ul {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   animation: heart-pulse 380ms 100ms cubic-bezier(0.16, 0.93, 0.72, 0.85) both;
 }
 .favorite--heart > i:hover {
@@ -313,7 +322,7 @@ ul {
 .favorite--menu > input:checked + .btn--menu > .btn--menu-checked i {
   transform: rotate(360deg);
 }
-.favorite--menu > input:checked + .btn--menu > span {
+.favorite--menu > input:checked + .btn--menu > .menu-price {
   margin-right: 5px;
 }
 

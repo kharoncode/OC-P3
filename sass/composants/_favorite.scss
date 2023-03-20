@@ -27,6 +27,7 @@
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                -moz-text-fill-color: transparent;
                 animation: heart-pulse 380ms 100ms cubic-bezier(.16,.93,.72,.85) both;
             }
         }
@@ -46,9 +47,10 @@
                  }
             }
 
-            &:checked+.btn--menu>span{
+            &:checked+.btn--menu>.menu-price{
                 margin-right: 5px;
            }
         }
     }
+
 }
