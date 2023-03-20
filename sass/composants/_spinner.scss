@@ -127,6 +127,7 @@
             }
 
             animation: step 3500ms 800ms linear both;
+            -webkit-animation: step 3500ms 800ms linear both;
         }
 
         &--walk{

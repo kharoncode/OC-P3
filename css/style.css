@@ -426,6 +426,7 @@ ul {
   height: 100%;
   overflow: hidden;
   animation: step 3500ms 800ms linear both;
+  -webkit-animation: step 3500ms 800ms linear both;
 }
 @media screen and (max-width: 650px) {
   .spinner-omf__load::after {
