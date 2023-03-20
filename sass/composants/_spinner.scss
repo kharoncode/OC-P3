@@ -73,7 +73,7 @@
 .spinner-omf{
     position: absolute;
     z-index: 9;
-    top: 15%;
+    top: 30vh;
     left: 50%;
     transform: translate(-50%, -15%);
     height: 150px;
@@ -84,7 +84,7 @@
     align-items: center;
 
     @include media-queries($mq-phone){
-        top: 6%;
+        top: 15vh;
     }
 
     animation: opa 3800ms 250ms ease both, move 1000ms 4050ms linear both;

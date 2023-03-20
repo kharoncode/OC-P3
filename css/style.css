@@ -46,11 +46,9 @@ h3 {
   font-weight: 500;
 }
 
-@media screen and (max-width: 650px) {
-  h4 {
-    font-size: 1.1em;
-    font-weight: 500;
-  }
+h4 {
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .hidden {
@@ -175,7 +173,6 @@ ul {
   position: relative;
   cursor: pointer;
   padding: 16px 0 16px 10px;
-  min-width: 330px;
   max-width: 500px;
   height: 70px;
   border-radius: 15px;
@@ -232,7 +229,7 @@ ul {
   padding-left: 10px;
   padding-right: 14px;
   font-weight: 500;
-  color: #363636;
+  color: #404040;
   flex-grow: 2;
   text-align: end;
   transition: all 400ms ease;
@@ -376,7 +373,7 @@ ul {
 .spinner-omf {
   position: absolute;
   z-index: 9;
-  top: 15%;
+  top: 30vh;
   left: 50%;
   transform: translate(-50%, -15%);
   height: 150px;
@@ -389,7 +386,7 @@ ul {
 }
 @media screen and (max-width: 650px) {
   .spinner-omf {
-    top: 6%;
+    top: 15vh;
   }
 }
 .spinner-omf__tilte {
@@ -490,12 +487,11 @@ ul {
 }
 @media screen and (max-width: 992px) {
   .body {
-    padding: 0 10px;
+    padding: 0;
   }
 }
 @media screen and (max-width: 650px) {
   .body {
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -663,6 +659,7 @@ ul {
   width: 100%;
   padding-bottom: 30px;
   align-self: start;
+  font-weight: 500;
 }
 @media screen and (max-width: 992px) {
   .main--index {
@@ -699,6 +696,9 @@ ul {
     min-width: 210px;
   }
 }
+.restaurant-card p {
+  font-size: 0.95em;
+}
 .restaurant-card:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 4px 19px 15px -3px, rgba(0, 0, 0, 0.05) 0px 9px 10px -2px;
 }
@@ -732,6 +732,18 @@ ul {
 .header--restaurant img {
   width: 100%;
 }
+.header--restaurant-picture {
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+@media screen and (max-width: 650px) {
+  .header--restaurant-picture {
+    height: 100%;
+    border-radius: initial;
+    object-fit: initial;
+  }
+}
 @media screen and (max-width: 650px) {
   .header-logo--restaurant {
     justify-content: space-between;
@@ -748,10 +760,9 @@ ul {
 .main--restaurant {
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 0 20px;
   margin-top: -60px;
   border-radius: 42px 42px 0 0;
   padding: 36px 12px 40px 13px;
@@ -760,6 +771,7 @@ ul {
   .main--restaurant {
     justify-content: initial;
     flex-direction: column;
+    align-items: center;
   }
 }
 .main--restaurant .favorite--heart {
@@ -789,7 +801,7 @@ ul {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 11px;
+  gap: 10px;
   width: 30%;
   flex-grow: 1;
   min-width: 313px;

@@ -81,7 +81,6 @@
         position: relative;
         cursor: pointer;
         padding: 16px 0 16px 10px;
-        min-width: 330px;
         max-width: 500px;
         height: 70px;
         border-radius: 15px;
@@ -151,7 +150,7 @@
             padding-left: 10px;
             padding-right: 14px;
             font-weight: 500;
-            color: darken($bg-color, 79);
+            color: darken($bg-color, 75);
             flex-grow: 2;
             text-align: end;
             transition: all 400ms ease;
