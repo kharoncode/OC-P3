@@ -183,14 +183,6 @@ ul {
   gap: 3px;
   justify-content: space-between;
   animation: btn-loading 1000ms 300ms ease both;
-  /*TEST*/
-}
-.btn--menu span.titre, .btn--menu span.sous-titre {
-  display: inline-block;
-  font-size: 1.1em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .btn--menu:hover .btn--menu-checked {
   width: 60px;
