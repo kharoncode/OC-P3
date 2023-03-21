@@ -1,3 +1,5 @@
+/* INDEX */
+
 /* VISIBILITY */
 @keyframes vis {
     0%{
@@ -56,9 +58,9 @@
         position: relative;
         display: flex;
         align-items: center;
-        padding: 23px 41px;
         width: 100%;
         &--index{
+            padding: 23px 41px;
             @include media-queries($mq-phone) {
                 justify-content: center;
                 padding: 23px 0 22px 0;
@@ -128,7 +130,9 @@
     }
 
     &__text{
-        padding: 0 38px 35px 38px;
+        padding: 0 30px 35px 30px;
+        font-size: 1.1em;
+        font-weight: 300;
     }
 }
 
@@ -167,12 +171,6 @@
     & div:not(:last-child){
         margin-bottom: 25px;
     }
-
-    & i{
-        position: absolute;
-        left: 38px;
-        color: darken($bg-color, 51);
-    }
 }
 
 
@@ -190,6 +188,13 @@
         flex-wrap: wrap;
         gap: 20px 20px;
 
+        @include media-queries($mq-tablette){
+            padding: 60px 20px 65px 20px;
+            &>div{
+                flex-grow: 1;
+            }
+        }
+
         &>div:nth-child(4n-1){
             flex-grow: 1;
         }
@@ -201,16 +206,8 @@
         
         & h2{
             width: 100%;
-            padding-bottom: 30px;
+            padding-bottom: 5px;
             align-self: start;
-            font-weight: 500;
-        }
-        
-        @include media-queries($mq-tablette){
-            padding: 60px 20px 65px 20px;
-            &>div{
-                flex-grow: 1;
-            }
         }
 
         @include media-queries($mq-phone){
@@ -241,7 +238,8 @@
     }
 
     & p{
-        font-size: 0.95em;
+        font-size: 1em;
+        font-weight: 300;
     }
 
     &:hover{
@@ -256,14 +254,14 @@
         border-radius: 20px 20px 0 0;
     }
 
-    &__info {
+    &__info{
         position: relative;
         padding-left: 15px;
         height: 32%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 5px;
+        gap: 2px;
     }
 
     & label{

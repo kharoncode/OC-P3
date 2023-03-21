@@ -1,3 +1,4 @@
+/* SPINNER */
 
 /* WALKER */
 @keyframes shake {
@@ -133,11 +134,11 @@
         &--walk{
             animation: walk-desktop 3000ms 600ms linear both;
             @include media-queries($mq-phone){
-                animation: walk-phone 3000ms 600ms linear both;;
+                animation: walk-phone 3000ms 600ms linear both;
             }
             &>i.fa-person-walking{
                 color: darken($color-secondary, 10);
-                animation: shake 500ms 250ms linear both alternate 7;
+                animation: shake 450ms 250ms linear both alternate 7;
             }
         }
 

@@ -1,7 +1,9 @@
-/* UTILS */ /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap");
+/* UTILS */ /* VARIABLES */
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /* Color */
 /* Size */
+/* MIXINS */
 /* Media Queries */
 /* BASE */
 * {
@@ -33,22 +35,29 @@ a:visited {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.8em;
+  font-weight: 700;
 }
 @media screen and (max-width: 650px) {
   h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 }
 
 h3 {
   font-size: 1.1em;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 650px) {
+  h3 {
+    font-weight: 300;
+  }
 }
 
 h4 {
   font-size: 1.1em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hidden {
@@ -63,40 +72,8 @@ ul {
   list-style-type: none;
 }
 
-/* LAYOUT */
-.footer {
-  padding: 26px 40px 40px 40px;
-  width: 100%;
-  background-color: #363636;
-  color: #FFFFFF;
-}
-@media screen and (max-width: 650px) {
-  .footer {
-    padding: 26px 25px 40px 25px;
-  }
-}
-.footer__logo {
-  width: 100%;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.1em;
-  padding-bottom: 30px;
-}
-.footer ul {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-@media screen and (max-width: 992px) {
-  .footer ul {
-    display: initial;
-    flex-wrap: nowrap;
-  }
-}
-.footer li:not(:first-child, :last-child) {
-  padding-bottom: 10px;
-}
-
 /* COMPOSANTS */
+/* BUTTON */
 @keyframes btn-loading {
   0% {
     transform: translateY(20px);
@@ -114,12 +91,13 @@ ul {
   width: 100%;
 }
 .btn--big {
+  padding: 0 22px;
   min-width: 216px;
   height: 48px;
   border-radius: 50px;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: #FFFFFF;
-  font-weight: 600;
+  font-weight: 500;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px;
 }
 .btn--help {
@@ -131,10 +109,16 @@ ul {
   height: 70px;
   border-radius: 15px;
   background-color: #f7f7f7;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 500;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px -3px;
   transition-duration: 0.3s;
+}
+.btn--help i {
+  font-size: 1.2em;
+  position: absolute;
+  left: 38px;
+  color: #7d7d7d;
 }
 .btn--help:hover {
   background-color: #f4eefc;
@@ -211,15 +195,21 @@ ul {
 }
 .btn--menu h4 {
   letter-spacing: 0.02em;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .btn--menu p {
-  font-size: 0.95em;
+  font-weight: 300;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (max-width: 650px) {
+  .btn--menu p {
+    font-size: 0.95em;
+  }
 }
 .btn--menu .menu {
   margin-right: auto;
@@ -276,6 +266,7 @@ ul {
   animation-delay: 3000ms;
 }
 
+/* FAVORITE */
 @keyframes heart-pulse {
   0% {
     transform: scale(0);
@@ -318,6 +309,7 @@ ul {
   margin-right: 5px;
 }
 
+/* SPINNER */
 /* WALKER */
 @keyframes shake {
   0% {
@@ -443,7 +435,7 @@ ul {
 }
 .spinner-omf__load--walk > i.fa-person-walking {
   color: #ff46cc;
-  animation: shake 500ms 250ms linear both alternate 7;
+  animation: shake 450ms 250ms linear both alternate 7;
 }
 .spinner-omf__load i {
   font-size: 1em;
@@ -456,7 +448,41 @@ ul {
   color: #782cd3;
 }
 
+/* LAYOUT */
+.footer {
+  padding: 26px 40px 40px 40px;
+  width: 100%;
+  background-color: #363636;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 650px) {
+  .footer {
+    padding: 26px 25px 40px 25px;
+  }
+}
+.footer__logo {
+  width: 100%;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.1em;
+  padding-bottom: 20px;
+}
+.footer ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 992px) {
+  .footer ul {
+    display: initial;
+    flex-wrap: nowrap;
+  }
+}
+.footer li:not(:first-child, :last-child) {
+  padding-bottom: 10px;
+}
+
 /* PAGES */
+/* INDEX */
 /* VISIBILITY */
 @keyframes vis {
   0% {
@@ -520,8 +546,10 @@ ul {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 23px 41px;
   width: 100%;
+}
+.header-logo--index {
+  padding: 23px 41px;
 }
 @media screen and (max-width: 650px) {
   .header-logo--index {
@@ -590,7 +618,9 @@ ul {
   padding: 43px 62px 20px 62px;
 }
 .header-nav__text {
-  padding: 0 38px 35px 38px;
+  padding: 0 30px 35px 30px;
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
 .header-functioning {
@@ -631,11 +661,6 @@ ul {
 .header-functioning div:not(:last-child) {
   margin-bottom: 25px;
 }
-.header-functioning i {
-  position: absolute;
-  left: 38px;
-  color: #7d7d7d;
-}
 
 /* MAIN */
 .main {
@@ -650,6 +675,14 @@ ul {
   flex-wrap: wrap;
   gap: 20px 20px;
 }
+@media screen and (max-width: 992px) {
+  .main--index {
+    padding: 60px 20px 65px 20px;
+  }
+  .main--index > div {
+    flex-grow: 1;
+  }
+}
 .main--index > div:nth-child(4n-1) {
   flex-grow: 1;
 }
@@ -658,17 +691,8 @@ ul {
 }
 .main--index h2 {
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
   align-self: start;
-  font-weight: 500;
-}
-@media screen and (max-width: 992px) {
-  .main--index {
-    padding: 60px 20px 65px 20px;
-  }
-  .main--index > div {
-    flex-grow: 1;
-  }
 }
 @media screen and (max-width: 650px) {
   .main--index {
@@ -698,7 +722,8 @@ ul {
   }
 }
 .restaurant-card p {
-  font-size: 0.95em;
+  font-size: 1em;
+  font-weight: 300;
 }
 .restaurant-card:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 4px 19px 15px -3px, rgba(0, 0, 0, 0.05) 0px 9px 10px -2px;
@@ -717,7 +742,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
+  gap: 2px;
 }
 .restaurant-card label {
   display: inline-block;
@@ -729,21 +754,22 @@ ul {
   font-size: 1.5em;
 }
 
+/* RESTAURANT */
 /* HEADER */
-.header--restaurant img {
-  width: 100%;
-}
 .header--restaurant-picture {
-  height: 300px;
+  width: 100%;
+  height: 330px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
 }
 @media screen and (max-width: 650px) {
   .header--restaurant-picture {
-    height: 100%;
+    height: 300px;
     border-radius: initial;
-    object-fit: initial;
   }
+}
+.header-logo--restaurant {
+  padding: 23px 41px 23px 0;
 }
 @media screen and (max-width: 650px) {
   .header-logo--restaurant {
@@ -752,7 +778,7 @@ ul {
   }
 }
 .header-logo i {
-  padding: 0 20px;
+  padding: 0 30px 0 20px;
   font-size: 1.5em;
   color: #363636;
 }
@@ -766,10 +792,11 @@ ul {
   gap: 0 20px;
   margin-top: -60px;
   border-radius: 42px 42px 0 0;
-  padding: 36px 12px 40px 13px;
+  padding: 36px 25px 40px 25px;
 }
 @media screen and (max-width: 650px) {
   .main--restaurant {
+    padding: 36px 15px 40px 15px;
     justify-content: initial;
     flex-direction: column;
     align-items: center;
@@ -786,9 +813,8 @@ ul {
 }
 .main--restaurant h2 {
   width: 100%;
-  padding: 0 3px 40px 3px;
+  padding: 0 60px 40px 3px;
   font-family: "Shrikhand", cursive;
-  font-size: 1.8em;
   font-weight: 500;
   align-self: flex-start;
 }
@@ -818,8 +844,6 @@ ul {
   padding-bottom: 5px;
   margin-bottom: 3px;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  font-weight: 400;
   border-bottom: solid 3px;
   border-image: linear-gradient(90deg, #99E2D0 60%, transparent 40%) 1;
 }

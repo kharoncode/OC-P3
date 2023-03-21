@@ -1,33 +1,32 @@
+/* RESTAURANT */
+
 /* HEADER */
 .header{
 
     &--restaurant{
-        & img{
-            width: 100%;
-        }
-
         &-picture{
-            height: 300px;
+            width: 100%;
+            height: 330px;
             border-radius: 10px 10px 0 0;
             object-fit: cover;
             @include media-queries($mq-phone)
             {
-                height: 100%;
+                height: 300px;
                 border-radius: initial;
-                object-fit: initial;
             }
         }
     }
 
     &-logo{
         &--restaurant{
+            padding: 23px 41px 23px 0;
             @include media-queries($mq-phone) {
                 justify-content: space-between;
                 padding: 23px 0 22px 0;
         }
         }
         & i{
-            padding: 0 20px;
+            padding: 0 30px 0 20px;
             font-size: 1.5em;
             color: darken($bg-color, 79);
         }
@@ -44,10 +43,11 @@
             gap: 0 20px;
             margin-top:-60px;
             border-radius: 42px 42px 0 0;
-            padding: 36px 12px 40px 13px;
-
+            padding: 36px 25px 40px 25px;
+            
             @include media-queries($mq-phone)
             {
+                padding: 36px 15px 40px 15px;
                 justify-content: initial;
                 flex-direction: column;
                 align-items: center;
@@ -65,9 +65,8 @@
 
             & h2{
                 width: 100%;
-                padding: 0 3px 40px 3px;
+                padding: 0 60px 40px 3px;
                 font-family: $logo-font;
-                font-size: 1.8em;
                 font-weight: 500;
                 align-self: flex-start;
 
@@ -96,8 +95,6 @@
                     padding-bottom: 5px;
                     margin-bottom: 3px;
                     text-transform: uppercase;
-                    letter-spacing: 0.03em;
-                    font-weight: 400;
                     border-bottom: solid 3px;
                     border-image: linear-gradient(90deg, $color-tertiary 60%, transparent 40%)1;
                 }

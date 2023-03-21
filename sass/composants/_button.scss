@@ -1,3 +1,5 @@
+/* BUTTON */
+
 @keyframes btn-loading {
     0%{
         transform: translateY(20px);
@@ -18,12 +20,13 @@
     width: 100%;
 
     &--big{
+        padding: 0 22px;
         min-width: 216px;
         height: 48px;
         border-radius: 50px;
         background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
         color: #FFFFFF;
-        font-weight: 600;
+        font-weight: 500;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px;
     }
 
@@ -36,10 +39,18 @@
         height: 70px;
         border-radius: 15px;
         background-color: darken($bg-color, 3);
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: 500;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px -3px;
         transition-duration: 0.3s;
+
+        & i{
+            font-size: 1.2em;
+            position: absolute;
+            left: 38px;
+            color: darken($bg-color, 51);
+        }
+
         &:hover{
             background-color: lighten($color-primary, 36);
             box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px;
@@ -127,16 +138,21 @@
 
         & h4{
             letter-spacing: 0.02em;
+            font-weight: 500;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
         & p{
-            font-size: 0.95em;
+            font-weight: 300;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            
+            @include media-queries($mq-phone){
+                font-size: 0.95em;
+            }
         }
 
         & .menu{

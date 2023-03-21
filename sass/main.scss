@@ -5,14 +5,14 @@
 /* BASE */
     @import "./base/general";
 
-/* LAYOUT */
-    @import "./layout/footer";   
-
 /* COMPOSANTS */
     @import "./composants/button";
     @import "./composants/favorite";
     @import "./composants/spinner";
-    
+
+/* LAYOUT */
+    @import "./layout/footer";   
+
 /* PAGES */
     @import "./pages/index";
     @import "./pages/restaurant"
