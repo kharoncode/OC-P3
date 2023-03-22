@@ -9,38 +9,26 @@
     100%{
         transform: rotate(10deg);
     }
-    
 }
 
-@keyframes walk-desktop {
-    0%{
-        transform: translateX(0px);
-    }
-
-    100%{
-        transform: translateX(270px);
-    }
-    
-}
-
-@keyframes walk-phone {
-    0%{
-        transform: translateX(0px);
-    }
-
-    100%{
-        transform: translateX(221px);
-    }
-    
-}
-
-@keyframes step {
+@keyframes step-desktop {
     0%{
         width: 0%;
     }
 
     100%{
-        width: 100%;
+        width: 85%;
+    }
+    
+}
+
+@keyframes step-phone {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 83%;
     }
     
 }
@@ -88,7 +76,7 @@
         top: 15vh;
     }
 
-    animation: opa 3800ms 250ms ease both, move 1000ms 4050ms linear both;
+    animation: opa 4600ms 250ms ease both, move 1000ms 4700ms linear both;
 
     &__tilte{
         font-family: $logo-font;
@@ -109,36 +97,27 @@
             width: 269px;
         }
 
-        &::after{
-            content:"- - - - - - - - - - - - -";
-            position: absolute;
-            left: 28px;
-            top: 5px;
+        
+        & i.fa-person-walking{
+                color: darken($color-secondary, 10);
+                animation: shake 450ms ease-in-out both alternate infinite;
+        }
+        
+        & .step{
+            padding-left: 10px;
             color: darken($color-tertiary, 10);
             font-size: 2em;
             font-weight: 700;
             width: 100%;
             height: 100%;
+            line-height: 100%;
             overflow: hidden;
+            
+            animation: step-desktop 3500ms 800ms linear both;
 
             @include media-queries($mq-phone){
-                content:"- - - - - - - - - - - - - -";
-                left: 25px;
                 font-size: 1.5em;
-            }
-
-            animation: step 3500ms 800ms linear both;
-            -webkit-animation: step 3500ms 800ms linear both;
-        }
-
-        &--walk{
-            animation: walk-desktop 3000ms 600ms linear both;
-            @include media-queries($mq-phone){
-                animation: walk-phone 3000ms 600ms linear both;
-            }
-            &>i.fa-person-walking{
-                color: darken($color-secondary, 10);
-                animation: shake 450ms 250ms linear both alternate 7;
+                animation: step-phone 3500ms 800ms linear both;
             }
         }
 

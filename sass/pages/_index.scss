@@ -17,7 +17,8 @@
             animation-delay: 4050ms + 250ms * $i;
          } 
     }
-    animation: vis 1500ms 4050ms ease both;
+
+    animation: vis 1500ms 4750ms ease both;
 }
 
 /* BODY */

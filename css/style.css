@@ -319,28 +319,20 @@ ul {
     transform: rotate(10deg);
   }
 }
-@keyframes walk-desktop {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(270px);
-  }
-}
-@keyframes walk-phone {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(221px);
-  }
-}
-@keyframes step {
+@keyframes step-desktop {
   0% {
     width: 0%;
   }
   100% {
-    width: 100%;
+    width: 85%;
+  }
+}
+@keyframes step-phone {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 83%;
   }
 }
 /* VISIBILITY */
@@ -375,7 +367,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: opa 3800ms 250ms ease both, move 1000ms 4050ms linear both;
+  animation: opa 4600ms 250ms ease both, move 1000ms 4700ms linear both;
 }
 @media screen and (max-width: 650px) {
   .spinner-omf {
@@ -404,38 +396,26 @@ ul {
     width: 269px;
   }
 }
-.spinner-omf__load::after {
-  content: "- - - - - - - - - - - - -";
-  position: absolute;
-  left: 28px;
-  top: 5px;
+.spinner-omf__load i.fa-person-walking {
+  color: #ff46cc;
+  animation: shake 450ms ease-in-out both alternate infinite;
+}
+.spinner-omf__load .step {
+  padding-left: 10px;
   color: #71d7be;
   font-size: 2em;
   font-weight: 700;
   width: 100%;
   height: 100%;
+  line-height: 100%;
   overflow: hidden;
-  animation: step 3500ms 800ms linear both;
-  -webkit-animation: step 3500ms 800ms linear both;
+  animation: step-desktop 3500ms 800ms linear both;
 }
 @media screen and (max-width: 650px) {
-  .spinner-omf__load::after {
-    content: "- - - - - - - - - - - - - -";
-    left: 25px;
+  .spinner-omf__load .step {
     font-size: 1.5em;
+    animation: step-phone 3500ms 800ms linear both;
   }
-}
-.spinner-omf__load--walk {
-  animation: walk-desktop 3000ms 600ms linear both;
-}
-@media screen and (max-width: 650px) {
-  .spinner-omf__load--walk {
-    animation: walk-phone 3000ms 600ms linear both;
-  }
-}
-.spinner-omf__load--walk > i.fa-person-walking {
-  color: #ff46cc;
-  animation: shake 450ms 250ms linear both alternate 7;
 }
 .spinner-omf__load i {
   font-size: 1em;
@@ -493,7 +473,7 @@ ul {
   }
 }
 .vis {
-  animation: vis 1500ms 4050ms ease both;
+  animation: vis 1500ms 4750ms ease both;
 }
 .vis-1 {
   animation-delay: 4300ms;
