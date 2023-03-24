@@ -14,9 +14,7 @@
 }
 
 .btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     width: 100%;
 
     &--big{
@@ -104,6 +102,21 @@
 
         animation: btn-loading 1000ms 300ms ease both;
 
+        &-checked{
+            right: 0;
+            height: 70px;
+            width: 0px;
+            background-color: $color-tertiary;
+            border-radius: 0 15px 15px 0;
+            transition: all 400ms ease;
+            overflow: hidden;
+
+            & i{
+                font-size: 1.5em;
+                color: $bg-color;
+            }
+        }
+
         &:hover{
             .btn--menu-checked{
                 width: 60px;
@@ -118,21 +131,6 @@
             &.btn--menu .menu-price{
                 margin-right: 5px;
                 transition: all 320ms 80ms ease;
-            }
-        }
-
-        &-checked{
-            right: 0;
-            height: 70px;
-            width: 0px;
-            background-color: $color-tertiary;
-            border-radius: 0 15px 15px 0;
-            transition: all 400ms ease;
-            overflow: hidden;
-
-            & i{
-                font-size: 1.5em;
-                color: $bg-color;
             }
         }
 
@@ -155,7 +153,7 @@
             }
         }
 
-        & .menu{
+        &__info{
             margin-right: auto;
             overflow: hidden;
 

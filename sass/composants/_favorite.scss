@@ -39,20 +39,4 @@
         }
     }
 
-    &--menu{
-        &>input{
-            display: none;
-            &:checked+.btn--menu>.btn--menu-checked{
-                 width: 60px;
-                 & i{
-                    transform: rotate(360deg);
-                 }
-            }
-
-            &:checked+.btn--menu>.menu-price{
-                margin-right: 5px;
-           }
-        }
-    }
-
 }
