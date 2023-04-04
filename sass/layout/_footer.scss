@@ -29,4 +29,8 @@
     & li:not(:first-child, :last-child){
         padding-bottom: 10px;
     }
+
+    & a {
+        color:#FFFFFF;
+    }
 }

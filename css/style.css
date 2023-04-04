@@ -443,6 +443,9 @@ ul {
 .footer li:not(:first-child, :last-child) {
   padding-bottom: 10px;
 }
+.footer a {
+  color: #FFFFFF;
+}
 
 /* PAGES */
 /* INDEX */
